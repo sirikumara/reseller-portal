@@ -1,0 +1,24 @@
+<div *ngIf="sponsorList">
+    <div>
+        <h2>sponsor list</h2>
+    </div>
+    <div>
+        <table border="1">
+            <tr>
+                <th>Sponsor Name</th>
+                <th>Company Name</th>
+                <th>Company Reg Code</th>
+                <th>City</th>
+                <th></th>
+                <th></th>
+            </tr>
+            <tr *ngFor="let sp of sponsorList">
+                <td>{{sp.name}}</td>
+                <td>{{sp.companyName}}</td>
+                <td>{{sp.companyRegCode}}</td>
+                <td>{{sp.city}}</td>
+                <td><button routerLink="/sponsor" [state]="{data:sp}">View Details</button></td>
+            </tr>
+        </table>
+    </div>
+</div>

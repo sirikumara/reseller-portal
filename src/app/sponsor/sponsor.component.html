@@ -1,0 +1,25 @@
+<!-- IN chield component-->
+<h2>Sponsor: {{sponsor.name}}</h2>
+<button (click)="goBack()">Back</button>
+<table>
+    <tr>
+        <td>Sponsor Name</td>
+        <td><input type="text" id="spName" [(ngModel)]="sponsor.name" /></td>
+        <td>Company Name</td>
+        <td><input type="text" id="companyName" [(ngModel)]="sponsor.companyName" /></td>
+        <td>Company Reg Code</td>
+        <td><input type="text" id="companyRegCode" [(ngModel)]="sponsor.companyRegCode" /></td>
+        <td>City</td>
+        <td><input type="text" id="city" [(ngModel)]="sponsor.city" /></td>
+        <td><button type="reset" (click)="onCancel()">Cancel</button></td>
+        <td>
+            <button (click)="onSave()">Save</button>
+            <input type="hidden" id="id" />
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <div>{{commonMsg}}</div>
+        </td>
+    </tr>
+</table>
